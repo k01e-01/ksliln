@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "ilo-lawa-nimi"
+version = "0.0.1"
+description = "ni li ilo pi kama sona kepeken ilo Textual!"
+authors = ["k01e <k01e.alm07@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    {include = "ilo_lawa_nimi", from = "."},
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+textual = "^0.28.1"
+
+[tool.poetry.group.dev.dependencies]
+textual = {version = "^0.28.1", extras = ["dev"]}
+black = "^23.3.0"
+
+[project.scripts]
+ilo-lawa-nimi = "ilo_lawa_nimi.__main__:main"
+
+[tool.poe.tasks]
+format = "black ."
+dev = "watchexec -r -e py -- textual run --dev ilo_lawa_nimi.__main__:ILNApp"
+debug = "textual console"
+stage = "./_stage.sh"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
