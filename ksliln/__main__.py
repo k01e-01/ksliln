@@ -11,7 +11,7 @@ class ILNApp(App[None]):
         Binding("q", "quit", "Quit"),
     ]
 
-    TITLE = "ilo lawa nimi"
+    TITLE = "ksliln"
 
     def compose(self) -> None:
         yield Horizontal(

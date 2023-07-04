@@ -5,5 +5,5 @@
 
 poetry build
 pipx install dist/$(ls dist | grep .whl)
-~/.local/bin/ilo-lawa-nimi                 # does this work on linux?
-pipx uninstall ilo-lawa-nimi
+~/.local/bin/ksliln                 # does this work on linux?
+pipx uninstall ksliln

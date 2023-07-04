@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "ilo-lawa-nimi"
+name = "ksliln"
 version = "0.0.1"
-description = "ni li ilo pi kama sona kepeken ilo Textual!"
+description = "ni li ilo pi kama sona kepeken ilo lawa nimi!"
 authors = ["k01e <k01e.alm07@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 packages = [
-    {include = "ilo_lawa_nimi", from = "."},
+    {include = "ksliln", from = "."},
 ]
 
 [tool.poetry.dependencies]
@@ -18,11 +18,11 @@ textual = {version = "^0.28.1", extras = ["dev"]}
 black = "^23.3.0"
 
 [project.scripts]
-ilo-lawa-nimi = "ilo_lawa_nimi.__main__:main"
+ksliln = "ksliln.__main__:main"
 
 [tool.poe.tasks]
 format = "black ."
-dev = "watchexec -r -e py -- textual run --dev ilo_lawa_nimi.__main__:ILNApp"
+dev = "watchexec -r -e py -- textual run --dev ksliln.__main__:ILNApp"
 debug = "textual console"
 stage = "./_stage.sh"
 
