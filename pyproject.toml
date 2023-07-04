@@ -12,6 +12,7 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.11"
 textual = "^0.28.1"
+click = "^8.1.3"
 
 [tool.poetry.group.dev.dependencies]
 textual = {version = "^0.28.1", extras = ["dev"]}
@@ -21,8 +22,8 @@ black = "^23.3.0"
 ksliln = "ksliln.__main__:main"
 
 [tool.poe.tasks]
-format = "black ."
-dev = "watchexec -r -e py -- textual run --dev ksliln.__main__:ILNApp"
+devg = "watchexec -r -e py -- textual run --dev ksliln.__main__:ILNApp" # gui
+devc = "poetry run ksliln"                                              # cli
 debug = "textual console"
 stage = "./_stage.sh"
 

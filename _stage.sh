@@ -5,5 +5,5 @@
 
 poetry build
 pipx install dist/$(ls dist | grep .whl)
-~/.local/bin/ksliln                 # does this work on linux?
+~/.local/bin/ksliln "$@"                 # does this work on linux?
 pipx uninstall ksliln

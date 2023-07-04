@@ -1,3 +1,7 @@
+import sys
+
+import click
+
 from textual.app import App
 from textual.widgets import Header, Footer, Placeholder
 from textual.containers import Horizontal, Container
@@ -24,8 +28,17 @@ class ILNApp(App[None]):
         )
 
 
+@click.command()
+@click.argument("name", default="world")
+def cli(name) -> None:
+    click.echo(f"Hello {name}!")
+
+
 def main() -> None:
-    ILNApp().run()
+    if len(sys.argv) > 1:
+        cli()
+    else:
+        ILNApp().run()
 
 
 if __name__ == "__main__":
