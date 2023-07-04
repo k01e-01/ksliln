@@ -17,7 +17,7 @@ textual = "^0.28.1"
 textual = {version = "^0.28.1", extras = ["dev"]}
 black = "^23.3.0"
 
-[project.scripts]
+[tool.poetry.scripts]
 ksliln = "ksliln.__main__:main"
 
 [tool.poe.tasks]
