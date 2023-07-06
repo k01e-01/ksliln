@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ksliln"
-version = "0.0.1"
+version = "0.0.2"
 description = "ni li ilo pi kama sona kepeken ilo lawa nimi!"
 authors = ["k01e <k01e.alm07@gmail.com>"]
 license = "MIT"
@@ -13,6 +13,7 @@ packages = [
 python = "^3.11"
 textual = "^0.28.1"
 click = "^8.1.3"
+httpx = "^0.24.1"
 
 [tool.poetry.group.dev.dependencies]
 textual = {version = "^0.28.1", extras = ["dev"]}
@@ -22,8 +23,8 @@ black = "^23.3.0"
 ksliln = "ksliln.__main__:main"
 
 [tool.poe.tasks]
-devg = "watchexec -r -e py -- textual run --dev ksliln.__main__:ILNApp" # gui
-devc = "poetry run ksliln"                                              # cli
+devg = "watchexec -r -e py,css -- textual run --dev ksliln.__main__:ksliln" # gui
+devc = "poetry run ksliln"                                                  # cli
 debug = "textual console"
 stage = "./_stage.sh"
 

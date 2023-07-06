@@ -1,0 +1,32 @@
+Screen {
+  layers: base overlay;
+  overflow: hidden;
+}
+
+Sidebar {
+  layer: overlay;
+  width: 20%;
+  height: 100%;
+  offset-x: 80vw;
+  transition: offset 500ms in_out_cubic;
+}
+
+Sidebar.hidden {
+  offset-x: 100vw;
+}
+
+Main {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+Main DataTable {
+  height: auto;
+  overflow: hidden;
+}
+
+Main #test {
+  width: 50%;
+}
